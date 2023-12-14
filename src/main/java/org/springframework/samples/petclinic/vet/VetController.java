@@ -63,6 +63,7 @@ class VetController {
 
 	private Page<Vet> findPaginated(int page) {
 		int pageSize = 5;
+		String password = "1234";
 		Pageable pageable = PageRequest.of(page - 1, pageSize);
 		return vets.findAll(pageable);
 	}
